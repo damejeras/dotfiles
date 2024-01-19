@@ -1,0 +1,22 @@
+{
+  "packages": [
+    "ripgrep@latest",
+    "neovim@latest",
+    "tmux@latest",
+    "fzf@latest",
+    "zoxide@latest",
+    "lf@latest",
+    "mkcert@latest",
+    "go@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}

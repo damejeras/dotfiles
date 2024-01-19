@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+
+# if not currently in tmux
+if [ -z "$TMUX" ]; then
+  exit 0
+else
+  # get current session name
+  CURRENT_SESSION=$(tmux display-message -p '#S')
+  # get last session name
+  LAST_SESSION=$(tmux show-env LAST_TMUX_SESSION 2> /dev/null | awk -F'=' '{print $2}')
+  if [ -z "$LAST_SESSION" ]; then
+    tmux display-message -t $CURRENT_SESSION "No last session"
+    exit 0
+  fi
+  # lookup last session
+  SESSION=$(tmux list-sessions | grep $LAST_SESSION | awk '{print $1}')
+  SESSION=${SESSION//:/}
+  # tmux is active
+  if [ -z "$SESSION" ]; then
+    tmux display-message -t $CURRENT_SESSION "Session gone"
+    # session does not exist
+    exit 0
+  else
+    # session exists
+    # set current session as last
+    tmux set-env -t $SESSION LAST_TMUX_SESSION $CURRENT_SESSION
+    # attach to session
+    # switch to tmux session
+    tmux switch-client -t $SESSION
+  fi
+fi
