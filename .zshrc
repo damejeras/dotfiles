@@ -1,3 +1,20 @@
+# ========================================================
+# =============== Custom shell config ====================
+# ========================================================
+
+# Launch devbox shell
+eval "$(devbox global shellenv)"
+
+# Initialize zoxide
+eval "$(zoxide init zsh)"
+
+# Dont polute $HOME
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+# ========================================================
+# =============== Oh My Zsh Config =======================
+# ========================================================
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
