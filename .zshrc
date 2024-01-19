@@ -11,6 +11,9 @@ eval "$(zoxide init zsh)"
 # Dont polute $HOME
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
+# Add local binaries
+export PATH=$HOME/.local/bin:$PATH
+
 # ========================================================
 # =============== Oh My Zsh Config =======================
 # ========================================================
