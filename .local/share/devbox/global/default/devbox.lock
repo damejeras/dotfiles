@@ -1,26 +1,6 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "fzf@latest": {
-      "last_modified": "2024-01-02T02:19:20Z",
-      "resolved": "github:NixOS/nixpkgs/63143ac2c9186be6d9da6035fa22620018c85932#fzf",
-      "source": "devbox-search",
-      "version": "0.45.0",
-      "systems": {
-        "aarch64-darwin": {
-          "store_path": "/nix/store/yq6zg7gli3i93mmrd9dxbb7kwnqlbrga-fzf-0.45.0"
-        },
-        "aarch64-linux": {
-          "store_path": "/nix/store/rsb77ysh86kr8a8v9kjgp30y591zzwz7-fzf-0.45.0"
-        },
-        "x86_64-darwin": {
-          "store_path": "/nix/store/777rd0hwbdmbc1zcilihi972q5kl7m6k-fzf-0.45.0"
-        },
-        "x86_64-linux": {
-          "store_path": "/nix/store/rg6aa8qnkhkkmc7afx43c7aqiyv3623h-fzf-0.45.0"
-        }
-      }
-    },
     "go@latest": {
       "last_modified": "2024-01-02T02:19:20Z",
       "resolved": "github:NixOS/nixpkgs/63143ac2c9186be6d9da6035fa22620018c85932#go",
