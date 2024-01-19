@@ -81,6 +81,26 @@
         }
       }
     },
+    "nodejs@latest": {
+      "last_modified": "2024-01-17T15:31:30Z",
+      "resolved": "github:NixOS/nixpkgs/f36047a5a4b5631f75210859abac7f97ba1ba7a7#nodejs_21",
+      "source": "devbox-search",
+      "version": "21.6.0",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/21jp6aq08m7yx8qg5029pq69dsfg1rbd-nodejs-21.6.0"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/l6jyw0mw8dx71f3d45pr66sjg2agidjr-nodejs-21.6.0"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/wpjx3mxwa8ldbvlf0kr0d9li9inp343n-nodejs-21.6.0"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/plhc6valzwyddhjv5jc2mdvbhjxyxa84-nodejs-21.6.0"
+        }
+      }
+    },
     "ripgrep@latest": {
       "last_modified": "2023-12-13T22:54:10Z",
       "resolved": "github:NixOS/nixpkgs/fd04bea4cbf76f86f244b9e2549fca066db8ddff#ripgrep",
@@ -118,6 +138,26 @@
         },
         "x86_64-linux": {
           "store_path": "/nix/store/qr266qpqrlfzm39ak93dx7h8iwnndmk2-tmux-3.3"
+        }
+      }
+    },
+    "unzip@latest": {
+      "last_modified": "2024-01-14T03:55:27Z",
+      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#unzip",
+      "source": "devbox-search",
+      "version": "6.0",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/7rx7k78dgn78vbvs964x6lpi7vk7g3vy-unzip-6.0"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/y6r5cdlpf8xwwmacjwymp0grzq303y9p-unzip-6.0"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/5kdb7sdj2814cwm5s1y81as7blqizhb3-unzip-6.0"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/j59akqfsi88w6ah4r7rfxcr786md6w12-unzip-6.0"
         }
       }
     },

@@ -6,7 +6,9 @@
     "zoxide@latest",
     "lf@latest",
     "mkcert@latest",
-    "go@latest"
+    "go@latest",
+    "nodejs@latest",
+    "unzip@latest"
   ],
   "shell": {
     "init_hook": [
