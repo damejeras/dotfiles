@@ -15,6 +15,42 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export PATH=$HOME/.local/bin:$PATH
 
 # ========================================================
+# =============== History configuration ==================
+# ========================================================
+
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+# Immediately append to history:
+setopt inc_append_history
+
+# Record timestamp in history:
+setopt extended_history
+
+# Expire duplicate entries first when trimming history:
+setopt hist_expire_dups_first
+
+# Don't record duplicates:
+setopt hist_ignore_dups
+
+# Delete old recorded entry if new entry is a duplicate:
+setopt hist_ignore_all_dups
+
+# Do not display a line previously found:
+setopt hist_find_no_dups
+
+# Don't record an entry startin with a space:
+setopt hist_ignore_space
+
+#Share history between sessions:
+setopt share_history
+
+# Execite command immediately after history expansion:
+unsetopt hist_verify
+
+
+# ========================================================
 # =============== Oh My Zsh Config =======================
 # ========================================================
 
