@@ -77,7 +77,7 @@ return {
             -- tsserver = {},
             -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
-            intelephense = {},
+            phpactor = {},
             lua_ls = {
               Lua = {
                 workspace = { checkThirdParty = false },
