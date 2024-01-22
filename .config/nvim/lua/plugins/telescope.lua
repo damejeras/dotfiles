@@ -27,8 +27,10 @@ return {
           path_display = { 'truncate' },
           layout_strategy = 'vertical',
           layout_config = {
+            height = 0.9,
+            width = 0.9,
             preview_cutoff = 1,
-            prompt_position = 'top',
+            prompt_position = 'bottom',
           },
         },
         extensions = {
