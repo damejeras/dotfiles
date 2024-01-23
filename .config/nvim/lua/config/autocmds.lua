@@ -5,6 +5,7 @@ autocmd("VimEnter", {
   callback = function()
     local bufferPath = vim.fn.expand("%:p")
     if vim.fn.isdirectory(bufferPath) ~= 0 then
+      vim.api.nvim_buf_delete(0, { force = true })
       vim.cmd.cd(bufferPath)
     end
   end,
