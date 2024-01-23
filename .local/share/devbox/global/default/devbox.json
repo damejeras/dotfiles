@@ -8,7 +8,9 @@
     "mkcert@latest",
     "go@latest",
     "nodejs@latest",
-    "unzip@latest"
+    "unzip@latest",
+    "kubectl@latest",
+    "kind@latest"
   ],
   "shell": {
     "init_hook": [
