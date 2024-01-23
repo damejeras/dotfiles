@@ -74,11 +74,18 @@ return {
         desc = '[/] Fuzzily search in current buffer'
       },
       {
-        '<leader>ss',
+        '<leader>st',
         function()
           require('telescope.builtin').builtin()
         end,
-        desc = '[S]earch [S]elect Telescope'
+        desc = '[S]earch [T]elescope'
+      },
+      {
+        '<leader>ss',
+        function()
+          require('telescope.builtin').lsp_document_symbols()
+        end,
+        desc = '[S]earch [S]ymbols'
       },
       {
         '<leader>gf',
@@ -104,9 +111,9 @@ return {
       {
         '<leader>sw',
         function()
-          require('telescope.builtin').grep_string()
+          require('telescope.builtin').lsp_dynamic_workspace_symbols()
         end,
-        desc = '[S]earch current [W]ord'
+        desc = '[S]earch [W]orkspace Symbols'
       },
       {
         '<leader>sg',

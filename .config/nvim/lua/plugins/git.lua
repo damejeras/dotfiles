@@ -1,6 +1,7 @@
 return {
   -- Git related plugins
   'tpope/vim-fugitive',
+  'shumphrey/fugitive-gitlab.vim',
 
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
