@@ -160,6 +160,9 @@ alias k="kubectl"
 alias t="tmux-session" # quick tmux session creation
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # dotfiles alias
 
+alias tmpf="export TEMP=\$(mktemp)"
+alias tmpd="export TEMP=\$(mktemp -d)"
+
 # ===================================================
 # =========== Setup fzf and key bindings ============
 # ===================================================

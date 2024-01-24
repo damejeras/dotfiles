@@ -104,9 +104,16 @@ return {
       {
         '<leader>sh',
         function()
+          require('telescope.builtin').git_status()
+        end,
+        desc = '[S]earch Git [H]unks'
+      },
+      {
+        '<leader>s?',
+        function()
           require('telescope.builtin').help_tags()
         end,
-        desc = '[S]earch [H]elp'
+        desc = '[S]earch [?]Help'
       },
       {
         '<leader>sw',
