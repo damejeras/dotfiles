@@ -1,3 +1,11 @@
+-- treesitter statusline function prints treesitter path under cursor
+local treesitterline = function (opts)
+  local treesitter = require('nvim-treesitter')
+  if treesitter then
+    return treesitter.statusline(opts)
+  end
+end
+
 return {
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -51,7 +59,7 @@ return {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {{'filename', path = 1}},
-        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_x = {{ treesitterline }, 'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
       },
