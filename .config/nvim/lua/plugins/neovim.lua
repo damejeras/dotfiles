@@ -83,6 +83,11 @@ return {
       -- insert_at_start = true,
       -- …etc.
       icons = {
+        gitsigns = {
+          added = {enabled = true, icon = '+'},
+          changed = {enabled = true, icon = '~'},
+          deleted = {enabled = true, icon = '-'},
+        },
         pinned = {
           button = '📌',
           filename = true,
