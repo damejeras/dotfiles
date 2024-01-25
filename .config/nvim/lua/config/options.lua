@@ -50,3 +50,6 @@ vim.o.termguicolors = true
 
 -- Highligh current line
 vim.o.cursorline = true
+
+-- Show 100 symbols line
+vim.o.colorcolumn = '100'
