@@ -22,4 +22,5 @@ vim.keymap.set('n', '<leader><delete>', '<cmd>BufferCloseAllButPinned<CR>', { de
 vim.keymap.set('n', '<leader>x', '<cmd>BufferClose<CR>', { desc = 'Close buffer' })
 
 -- Tmux pane commands
-vim.keymap.set('n', '<leader>pf', '<cmd>silent !tmux split-window -v -p 25 "cd %:p:h; clear && $SHELL"<CR>', { desc = 'Tmux [P]ane with [F]older' })
+vim.keymap.set('n', '<leader>-', '<cmd>silent !tmux split-window -v -p 25 "cd %:p:h; clear && $SHELL"<CR>', { desc = 'Tmux [P]ane with [F]older' })
+vim.keymap.set('n', '<leader>|', '<cmd>silent !tmux split-window -h -p 50 "cd %:p:h; clear && $SHELL"<CR>', { desc = 'Tmux [P]ane with [F]older' })
