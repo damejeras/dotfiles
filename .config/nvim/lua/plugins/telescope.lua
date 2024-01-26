@@ -85,14 +85,14 @@ return {
       {
         '<leader>fs',
         function()
-          require('telescope.builtin').lsp_document_symbols()
+          require('telescope.builtin').lsp_document_symbols({symbol_width = 50})
         end,
         desc = '[F]ind Document [S]ymbols'
       },
       {
         '<leader>fS',
         function()
-          require('telescope.builtin').lsp_dynamic_workspace_symbols()
+          require('telescope.builtin').lsp_dynamic_workspace_symbols({symbol_width = 50})
         end,
         desc = '[F]ind Workspace [S]ymbols'
       },
