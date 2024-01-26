@@ -22,7 +22,7 @@ return {
         ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
         ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+        ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
@@ -111,5 +111,23 @@ return {
   {
     "LintaoAmons/scratch.nvim",
     event = "VeryLazy",
+    keys = {
+      {
+        '<leader>sn',
+        '<cmd>Scratch<CR>',
+        desc = '[S]cratch [N]ew'
+      },
+      {
+        '<leader>ss',
+        '<cmd>ScratchOpen<CR>',
+        desc = '[S]cratch [S]earch'
+      },
+    },
   },
+
+  -- Auto close brackets
+  {
+    'm4xshen/autoclose.nvim',
+    opts = {},
+  }
 }
