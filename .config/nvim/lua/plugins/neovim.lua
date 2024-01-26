@@ -106,4 +106,10 @@ return {
       },
     },
   },
+
+  -- Scratchpad
+  {
+    "LintaoAmons/scratch.nvim",
+    event = "VeryLazy",
+  },
 }

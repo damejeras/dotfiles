@@ -13,6 +13,7 @@ return {
         cond = function() return vim.fn.executable 'make' == 1 end,
       },
       { 'nvim-telescope/telescope-live-grep-args.nvim' },
+      { 'nvim-telescope/telescope-ui-select.nvim' }
     },
 
     config = function (_, _)
@@ -50,6 +51,7 @@ return {
       })
 
       telescope.load_extension('fzf')
+      telescope.load_extension('ui-select')
 
       -- Show line numbers in preview
       vim.cmd("autocmd User TelescopePreviewerLoaded setlocal number")
