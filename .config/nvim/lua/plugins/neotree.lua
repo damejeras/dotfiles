@@ -11,7 +11,7 @@ return {
     keys = {
       {
         '<leader>e',
-        '<cmd>Neotree<CR>',
+        '<cmd>Neotree toggle<CR>',
         desc = 'File [E]xplorer'
       }
     }
