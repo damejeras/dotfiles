@@ -99,8 +99,8 @@ return {
       sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {{'filename', path = 1}},
-        lualine_x = {{ navicline }, 'encoding', 'fileformat', 'filetype'},
+        lualine_c = {{ navicline }},
+        lualine_x = {{'filename', path = 1}, 'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
       },
