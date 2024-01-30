@@ -13,7 +13,8 @@ return {
         cond = function() return vim.fn.executable 'make' == 1 end,
       },
       { 'nvim-telescope/telescope-live-grep-args.nvim' },
-      { 'nvim-telescope/telescope-ui-select.nvim' }
+      { 'nvim-telescope/telescope-ui-select.nvim' },
+      { 'nvim-telescope/telescope-dap.nvim' },
     },
 
     config = function (_, _)
@@ -52,29 +53,30 @@ return {
 
       telescope.load_extension('fzf')
       telescope.load_extension('ui-select')
+      telescope.load_extension('dap')
 
       -- Show line numbers in preview
       vim.cmd("autocmd User TelescopePreviewerLoaded setlocal number")
     end,
 
     keys = {
-      {
-        '<leader>?',
-        function()
-          require('telescope.builtin').oldfiles()
-        end,
-        desc = '[?] Find recently opened files'
-      },
-      {
-        '<leader>/',
-        function()
-          require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-            winblend = 10,
-            previewer = false,
-          })
-        end,
-        desc = '[/] Fuzzily search in current buffer'
-      },
+      -- {
+      --   '<leader>?',
+      --   function()
+      --     require('telescope.builtin').oldfiles()
+      --   end,
+      --   desc = '[?] Find recently opened files'
+      -- },
+      -- {
+      --   '<leader>/',
+      --   function()
+      --     require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+      --       winblend = 10,
+      --       previewer = false,
+      --     })
+      --   end,
+      --   desc = '[/] Fuzzily search in current buffer'
+      -- },
       {
         '<leader>ft',
         function()
@@ -116,13 +118,6 @@ return {
           require('telescope.builtin').help_tags()
         end,
         desc = '[F]ind [?]Help'
-      },
-      {
-        '<leader>fS',
-        function()
-          require('telescope.builtin').lsp_dynamic_workspace_symbols()
-        end,
-        desc = '[F]ind Workspace [S]ymbols'
       },
       {
         '<leader>fg',

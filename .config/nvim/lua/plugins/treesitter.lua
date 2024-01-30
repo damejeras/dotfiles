@@ -4,6 +4,10 @@ return {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      {
+        'LiadOz/nvim-dap-repl-highlights',
+        opts = {},
+      }
     },
     build = ':TSUpdate',
     config = function (_, _)
