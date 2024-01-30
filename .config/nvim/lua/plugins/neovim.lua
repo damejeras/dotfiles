@@ -1,8 +1,7 @@
--- treesitter statusline function prints treesitter path under cursor
-local treesitterline = function (opts)
-  local treesitter = require('nvim-treesitter')
-  if treesitter then
-    return treesitter.statusline(opts)
+local navicline = function (opts)
+  local navic = require('nvim-navic')
+  if navic then
+    return navic.get_location(opts)
   end
 end
 
@@ -39,13 +38,54 @@ return {
     'Mofiqul/vscode.nvim',
     priority = 1000,
     config = function()
+      local c = require('vscode.colors').get_colors()
       vim.cmd.colorscheme 'vscode'
+
+      -- Set colors for navic. TODO: there are some
+      vim.api.nvim_set_hl(0, "NavicIconsFile",          {default = true, fg = c.vscViolet, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsModule",        {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsNamespace",     {default = true, fg = c.vscBlueGreen, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsPackage",       {default = true, fg = c.vscBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsClass",         {default = true, fg = c.vscBlueGreen, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsMethod",        {default = true, fg = c.vscPink, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsProperty",      {default = true, fg = c.vscFront, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsField",         {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsConstructor",   {default = true, fg = c.vscUiOrange, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsEnum",          {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsInterface",     {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsFunction",      {default = true, fg = c.vscYellow, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsVariable",      {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsConstant",      {default = true, fg = c.vscBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsString",        {default = true, fg = c.vscOrange, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsNumber",        {default = true, fg = c.vscLightGreen, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsBoolean",       {default = true, fg = c.vscBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsArray",         {default = true, fg = c.vscPink, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsObject",        {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsKey",           {default = true, fg = c.vscBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsNull",          {default = true, fg = c.vscBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsEnumMember",    {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsStruct",        {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsEvent",         {default = true, fg = c.vscLightBlue, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsOperator",      {default = true, fg = c.vscFront, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicIconsTypeParameter", {default = true, fg = c.vscBlueGreen, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicText",               {default = true, fg = c.vscFront, bg = c.vscLeftMid})
+      vim.api.nvim_set_hl(0, "NavicSeparator",          {default = true, fg = c.vscFront, bg = c.vscLeftMid})
     end,
   },
 
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
+
+    dependencies = {
+      'SmiteshP/nvim-navic',
+      opts = {
+        highlight = true,
+        lsp = {
+          auto_attach = true,
+        },
+      },
+    },
 
     -- See `:help lualine.txt`
     opts = {
@@ -60,7 +100,7 @@ return {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {{'filename', path = 1}},
-        lualine_x = {{ treesitterline }, 'encoding', 'fileformat', 'filetype'},
+        lualine_x = {{ navicline }, 'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
       },
