@@ -1,6 +1,10 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "direnv": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#direnv",
+      "source": "nixpkg"
+    },
     "go@latest": {
       "last_modified": "2024-01-02T02:19:20Z",
       "resolved": "github:NixOS/nixpkgs/63143ac2c9186be6d9da6035fa22620018c85932#go",

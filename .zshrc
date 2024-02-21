@@ -8,6 +8,9 @@ eval "$(devbox global shellenv)"
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
+# Enable direnv
+eval "$(direnv hook zsh)"
+
 # Dont polute $HOME
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
@@ -156,6 +159,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias dc="docker-compose"
 alias k="kubectl"
 alias t="tmux-session" # quick tmux session creation
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # dotfiles alias

@@ -10,7 +10,8 @@
     "nodejs@latest",
     "unzip@latest",
     "kubectl@latest",
-    "kind@latest"
+    "kind@latest",
+    "direnv"
   ],
   "shell": {
     "init_hook": [
