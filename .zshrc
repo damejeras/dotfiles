@@ -1,3 +1,35 @@
+# ===================================================
+# =========== Setup fzf and key bindings ============
+# ===================================================
+# Ensure fzf binary is downloaded
+if [[ -d "$HOME/.fzf" ]]; then
+  if [[ ! -f "$HOME/.fzf/bin/fzf" ]]; then
+    echo "Installing fzf..."
+    $HOME/.fzf/install --bin
+  fi
+fi
+# Ensure its in the path
+if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
+fi
+# Enable completion and key-bindings
+source "$HOME/.fzf/shell/completion.zsh"
+source "$HOME/.fzf/shell/key-bindings.zsh"
+
+# ====================================================
+# ================== Setup paths =====================
+# ====================================================
+
+# Add Go binaries to path
+if [[ -d "$HOME/go/bin" ]]; then
+  if [[ ! "$PATH" == *$HOME/go/bin* ]]; then
+    export PATH="${PATH:+${PATH}:}${HOME}/go/bin"
+  fi
+fi
+
+# Add local binaries
+export PATH=$HOME/.local/bin:$PATH
+
 # ========================================================
 # =============== Custom shell config ====================
 # ========================================================
@@ -13,9 +45,6 @@ eval "$(direnv hook zsh)"
 
 # Dont polute $HOME
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
-# Add local binaries
-export PATH=$HOME/.local/bin:$PATH
 
 # ========================================================
 # =============== History configuration ==================
@@ -166,35 +195,6 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # dotfiles ali
 
 alias tmpf="export TEMP=\$(mktemp)"
 alias tmpd="export TEMP=\$(mktemp -d)"
-
-# ===================================================
-# =========== Setup fzf and key bindings ============
-# ===================================================
-# Ensure fzf binary is downloaded
-if [[ -d "$HOME/.fzf" ]]; then
-  if [[ ! -f "$HOME/.fzf/bin/fzf" ]]; then
-    echo "Installing fzf..."
-    $HOME/.fzf/install --bin
-  fi
-fi
-# Ensure its in the path
-if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
-fi
-# Enable completion and key-bindings
-source "$HOME/.fzf/shell/completion.zsh"
-source "$HOME/.fzf/shell/key-bindings.zsh"
-
-# ====================================================
-# ================== Setup paths =====================
-# ====================================================
-
-# Add Go binaries to path
-if [[ -d "$HOME/go/bin" ]]; then
-  if [[ ! "$PATH" == *$HOME/go/bin* ]]; then
-    PATH="${PATH:+${PATH}:}${HOME}/go/bin"
-  fi
-fi
 
 # ====================================================
 # ========= Load machine specific config =============
