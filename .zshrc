@@ -12,9 +12,6 @@ fi
 if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
 fi
-# Enable completion and key-bindings
-source "$HOME/.fzf/shell/completion.zsh"
-source "$HOME/.fzf/shell/key-bindings.zsh"
 
 # ====================================================
 # ================== Setup paths =====================
@@ -195,6 +192,10 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # dotfiles ali
 
 alias tmpf="export TEMP=\$(mktemp)"
 alias tmpd="export TEMP=\$(mktemp -d)"
+
+# Enable completion and key-bindings
+source "$HOME/.fzf/shell/completion.zsh"
+source "$HOME/.fzf/shell/key-bindings.zsh"
 
 # ====================================================
 # ========= Load machine specific config =============
