@@ -2,4 +2,4 @@
 	name = Darius Mejeras
 	email = darius@mejeras.lt
 [core]
-	excludesfile = /home/darius/.gitignore
+	excludesfile = ~/.gitignore
