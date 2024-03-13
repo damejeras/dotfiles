@@ -3,3 +3,5 @@
 	email = darius@mejeras.lt
 [core]
 	excludesfile = ~/.gitignore
+[push]
+	autoSetupRemote = true
