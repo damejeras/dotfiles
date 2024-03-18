@@ -11,7 +11,8 @@
     "unzip@latest",
     "kubectl@latest",
     "kind@latest",
-    "direnv"
+    "direnv",
+    "tldr@latest"
   ],
   "shell": {
     "init_hook": [
