@@ -175,6 +175,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+#
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -192,6 +193,19 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # dotfiles ali
 
 alias tmpf="export TEMP=\$(mktemp)"
 alias tmpd="export TEMP=\$(mktemp -d)"
+
+# Create a file and make a directory
+mkfile() {
+  # Print usage if no arguments
+  if [[ $# -eq 0 ]]; then
+    echo "Usage: mkfile <file>"
+    return 1
+  fi
+
+  mkdir -p $(dirname $1) && touch $1
+}
+alias mkf="mkfile"
+
 
 # Enable completion and key-bindings
 source "$HOME/.fzf/shell/completion.zsh"
