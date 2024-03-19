@@ -10,7 +10,7 @@ if [[ -d "$HOME/.fzf" ]]; then
 fi
 # Ensure its in the path
 if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
+  PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
 fi
 
 # ====================================================
@@ -20,19 +20,24 @@ fi
 # Add Go binaries to path
 if [[ -d "$HOME/go/bin" ]]; then
   if [[ ! "$PATH" == *$HOME/go/bin* ]]; then
-    export PATH="${PATH:+${PATH}:}${HOME}/go/bin"
+    PATH="${PATH:+${PATH}:}${HOME}/go/bin"
   fi
 fi
 
 # Add local binaries
-export PATH=$HOME/.local/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
 
 # ========================================================
 # =============== Custom shell config ====================
 # ========================================================
 
 # Launch devbox shell
-eval "$(devbox global shellenv)"
+eval "$(devbox global shellenv --init-hook -r)"
+
+# Remove odd devbox wrappers from PATH
+# https://github.com/jetpack-io/devbox/issues/1509
+TRIM_PATHS="$(jq -r '.Variables.PATH.Value' < "$HOME/.local/share/devbox/global/default/.devbox/.nix-print-dev-env-cache")"
+PATH=$(echo "$PATH" | tr ':' '\n' | grep -v -F -x -f <(echo "$TRIM_PATHS" | tr ':' '\n') | tr '\n' ':' | sed 's/:$//')
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
@@ -218,6 +223,12 @@ source "$HOME/.fzf/shell/key-bindings.zsh"
 if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
 fi
+
+# ====================================================
+# ================ Export path =======================
+# ====================================================
+
+export PATH
 
 # ======================================================
 # ========= Everything below probably is junk ==========
