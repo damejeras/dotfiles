@@ -115,15 +115,10 @@ return {
     main = 'ibl',
     opts = {
       indent = {
-        char = "┊",
+        char = "┋",
       },
       scope = {
-        enabled = true,
-        show_start = false,
-        show_end = false,
-        injected_languages = false,
-        highlight = { "Function", "Label" },
-        priority = 500,
+        enabled = false,
       },
     },
   },
