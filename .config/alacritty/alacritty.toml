@@ -1,29 +1,33 @@
 [font]
 normal = { family = "JetBrainsMono Nerd Font" }
 
-# Default colors
 [colors.primary]
-background = '#0c0c0c'
-foreground = '#cccccc'
+background = '#181818'
+foreground = '#eeeeee'
+
+# Cursor colors
+[colors.cursor]
+text =   '#ffffff'
+cursor = '#bbbbbb'
 
 # Normal colors
 [colors.normal]
-black      = '#0c0c0c'
-red        = '#c50f1f'
-green      = '#13a10e'
-yellow     = '#c19c00'
-blue       = '#0037da'
-magenta    = '#881798'
-cyan       = '#3a96dd'
-white      = '#cccccc'
+black =   '#242424'
+red =     '#d61b15'
+green =   '#59a413'
+yellow =  '#fdb40b'
+blue =    '#053a8c'
+magenta = '#e40038'
+cyan =    '#2594e0'
+white =   '#eeeeee'
 
 # Bright colors
 [colors.bright]
-black      = '#767676'
-red        = '#e74856'
-green      = '#16c60c'
-yellow     = '#f9f1a5'
-blue       = '#3b78ff'
-magenta    = '#b4009e'
-cyan       = '#61d6d6'
-white      = '#f2f2f2'
+black =   '#4a4a4a'
+red =     '#fb1b18'
+green =   '#6ac118'
+yellow =  '#fdc70e'
+blue =    '#0855fe'
+magenta = '#fb004f'
+cyan =    '#3ea7fc'
+white =   '#8c00eb'
