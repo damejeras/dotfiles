@@ -122,7 +122,7 @@ return {
         show_start = false,
         show_end = false,
         injected_languages = false,
-        highlight = { "Function", "Label", "CursorColumn" },
+        highlight = { "Function", "Label" },
         priority = 500,
       },
     },
