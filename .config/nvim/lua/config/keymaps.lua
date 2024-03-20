@@ -22,3 +22,7 @@ vim.keymap.set('n', '<leader>x', '<cmd>BufferClose<CR>', { desc = 'Close buffer'
 -- Tmux pane commands
 vim.keymap.set('n', '<leader>-', '<cmd>silent !tmux split-window -v -p 25 "cd %:p:h; clear && $SHELL"<CR>', { desc = 'Tmux Pane Bottom' })
 vim.keymap.set('n', '<leader>|', '<cmd>silent !tmux split-window -h -p 50 "cd %:p:h; clear && $SHELL"<CR>', { desc = 'Tmux Pane Right' })
+
+-- Shift blocks in visual mode
+vim.keymap.set('v', '<', '<gv', { desc = 'Shift block left' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Shift block right' })
