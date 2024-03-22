@@ -154,6 +154,13 @@ return {
           require('telescope.builtin').buffers()
         end,
         desc = '[F]ind [B]uffers'
+      },
+      {
+        '<leader>fm',
+        function()
+          require('telescope.builtin').marks()
+        end,
+        desc = '[F]ind [M]arks'
       }
     },
 
