@@ -1,3 +1,5 @@
+local width = 0.9
+
 return {
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -31,7 +33,7 @@ return {
           layout_strategy = 'vertical',
           layout_config = {
             height = 0.9,
-            width = 0.9,
+            width = width,
             preview_cutoff = 1,
             prompt_position = 'bottom',
           },
@@ -95,7 +97,23 @@ return {
       {
         '<leader>fS',
         function()
-          require('telescope.builtin').lsp_dynamic_workspace_symbols({symbol_width = 50})
+          local symbol_type_width = 10
+          local symbol_width = 50
+
+          -- Get width of the terminal and resolve fname_width, symbol_width and symbol_type_width
+          local full_width = vim.api.nvim_win_get_width(0)
+          local available = full_width * width
+          local fname_width = available - symbol_width - symbol_type_width
+
+          if fname_width > 100 then
+            fname_width = 100
+          end
+
+          require('telescope.builtin').lsp_dynamic_workspace_symbols({
+            fname_width = fname_width,
+            symbol_width = symbol_width,
+            symbol_type_width = symbol_type_width
+          })
         end,
         desc = '[F]ind Workspace [S]ymbols'
       },
