@@ -2,33 +2,36 @@
 normal = { family = "JetBrainsMono Nerd Font" }
 size = 13
 
-[colors.primary]
-background = '#181818'
-foreground = '#eeeeee'
+# Cyber Punk Neon
+# Source https//github.com/Roboron3042/Cyberpunk-Neon
 
-# Cursor colors
+# Default colors
+[colors.primary]
+background = '#000b1e'
+foreground = '#0abdc6'
+
 [colors.cursor]
-text =   '#ffffff'
-cursor = '#bbbbbb'
+text   = '#000b1e'
+cursor = '#0abdc6'
 
 # Normal colors
 [colors.normal]
-black =   '#242424'
-red =     '#d61b15'
-green =   '#59a413'
-yellow =  '#fdb40b'
-blue =    '#053a8c'
-magenta = '#e40038'
-cyan =    '#2594e0'
-white =   '#eeeeee'
+black   = '#123e7c'
+red     = '#ff0000'
+green   = '#d300c4'
+yellow  = '#f57800'
+blue    = '#123e7c'
+magenta = '#711c91'
+cyan    = '#0abdc6'
+white   = '#d7d7d5'
 
 # Bright colors
 [colors.bright]
-black =   '#4a4a4a'
-red =     '#fb1b18'
-green =   '#6ac118'
-yellow =  '#fdc70e'
-blue =    '#0855fe'
-magenta = '#fb004f'
-cyan =    '#3ea7fc'
-white =   '#8c00eb'
+black   = '#1c61c2'
+red     = '#ff0000'
+green   = '#d300c4'
+yellow  = '#f57800'
+blue    = '#00ff00'
+magenta = '#711c91'
+cyan    = '#0abdc6'
+white   = '#d7d7d5'
