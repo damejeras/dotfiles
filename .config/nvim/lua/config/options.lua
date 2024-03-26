@@ -55,3 +55,6 @@ vim.o.cursorline = true
 
 -- Show 100 symbols line
 vim.o.colorcolumn = '100'
+
+-- Disable line wrap
+vim.o.wrap = false
