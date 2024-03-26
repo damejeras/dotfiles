@@ -16,11 +16,24 @@ return {
       {
         'zbirenbaum/copilot.lua',
         event = { 'VeryLazy' },
-        opts = {},
+        opts = {
+          filetypes = {
+            yaml = true,
+            markdown = false,
+            help = false,
+            gitcommit = false,
+            gitrebase = false,
+            hgcommit = false,
+            svn = false,
+            cvs = false,
+            ["."] = false,
+          },
+        },
       },
       {
         'zbirenbaum/copilot-cmp',
-        opts = {},
+        opts = {
+        },
       },
     },
 
