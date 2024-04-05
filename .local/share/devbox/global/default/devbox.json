@@ -5,14 +5,15 @@
     "zoxide@latest",
     "lf@latest",
     "mkcert@latest",
-    "go@latest",
     "nodejs@latest",
     "unzip@latest",
     "kubectl@latest",
     "kind@latest",
     "direnv",
     "tldr@latest",
-    "tmux@3.3"
+    "tmux@3.3",
+    "lazygit@latest",
+    "go@1.22.1"
   ],
   "shell": {
     "init_hook": [
