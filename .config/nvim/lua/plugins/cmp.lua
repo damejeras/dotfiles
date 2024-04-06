@@ -13,28 +13,6 @@ return {
       { 'ray-x/cmp-treesitter' },
       { 'saadparwaiz1/cmp_luasnip' },
       { 'L3MON4D3/LuaSnip' },
-      {
-        'zbirenbaum/copilot.lua',
-        event = { 'VeryLazy' },
-        opts = {
-          filetypes = {
-            yaml = true,
-            markdown = false,
-            help = false,
-            gitcommit = false,
-            gitrebase = false,
-            hgcommit = false,
-            svn = false,
-            cvs = false,
-            ["."] = false,
-          },
-        },
-      },
-      {
-        'zbirenbaum/copilot-cmp',
-        opts = {
-        },
-      },
     },
 
     config = function()
@@ -105,7 +83,6 @@ return {
         },
 
         sources = cmp.config.sources {
-          { name = "copilot", group_index = 2 },
           { name = 'nvim_lsp' },
           { name = 'nvim_lsp_signature_help' },
           { name = 'luasnip' },
