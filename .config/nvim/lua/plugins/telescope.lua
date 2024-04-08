@@ -19,13 +19,15 @@ return {
       { 'nvim-telescope/telescope-dap.nvim' },
     },
 
-    config = function (_, _)
+    config = function(_, _)
       local telescope = require('telescope')
       local lga_actions = require("telescope-live-grep-args.actions")
 
       telescope.setup({
         defaults = {
-          file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a", "%.out", "%.class", "%.pdf", "%.mkv", "%.mp4", "%.zip" },
+          file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a",
+            "%.out", "%.class", "%.pdf", "%.mkv",
+            "%.mp4", "%.zip", "vendor/" },
           vimgrep_arguments = { 'rg', '--hidden', '--color=never',
             '--no-heading', '--with-filename', '--line-number',
             '--column', '--smart-case', '-g', '!.git', },
@@ -90,7 +92,7 @@ return {
       {
         '<leader>fs',
         function()
-          require('telescope.builtin').lsp_document_symbols({symbol_width = 50})
+          require('telescope.builtin').lsp_document_symbols({ symbol_width = 50 })
         end,
         desc = '[F]ind Document [S]ymbols'
       },
@@ -120,7 +122,7 @@ return {
       {
         '<leader>ff',
         function()
-          require('telescope.builtin').find_files({hidden = true, no_ignore = true})
+          require('telescope.builtin').find_files({ hidden = true, no_ignore = true })
         end,
         desc = '[F]ind [F]iles'
       },

@@ -25,6 +25,26 @@
         }
       }
     },
+    "jq@1.6": {
+      "last_modified": "2023-09-27T09:29:47Z",
+      "resolved": "github:NixOS/nixpkgs/f3dab3509afca932f3f4fd0908957709bb1c1f57#jq",
+      "source": "devbox-search",
+      "version": "1.6",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/mx05akv1lmsn7vbl32krzbxz6zhsckb0-jq-1.6-bin"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/nzwfgsp28vgxv7n2gl5fxqkca9awh4dz-jq-1.6-bin"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/dhq6cj1yq76iz7yh9jvv2vwwnggsg354-jq-1.6-bin"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/aj8lqifsyynq8iknivvxkrsqnblj7qzs-jq-1.6-bin"
+        }
+      }
+    },
     "kind@latest": {
       "last_modified": "2024-03-22T11:26:23Z",
       "resolved": "github:NixOS/nixpkgs/a3ed7406349a9335cb4c2a71369b697cecd9d351#kind",

@@ -88,7 +88,7 @@ return {
               },
             },
             gopls = {
-              env = { GOFLAGS = '-tags=unit' },
+              env = { GOFLAGS = '-tags=unit', GOOS = 'linux' },
               hints = {
                 assignVariableTypes = true,
                 compositeLiteralFields = true,
