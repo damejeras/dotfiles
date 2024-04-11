@@ -117,7 +117,6 @@ return {
                 }
               }
 						},
-            helm_ls = {},
           }
 
           -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
