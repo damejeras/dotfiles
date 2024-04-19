@@ -132,43 +132,15 @@
       "version": "0.20.2",
       "systems": {
         "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/lb5jafrd85al558k2n8qx8sb1pn39dbz-lima-0.20.2",
-              "default": true
-            }
-          ],
           "store_path": "/nix/store/lb5jafrd85al558k2n8qx8sb1pn39dbz-lima-0.20.2"
         },
         "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/a8lr1j8j7i9k1w85b6506ixd58irxc6d-lima-0.20.2",
-              "default": true
-            }
-          ],
           "store_path": "/nix/store/a8lr1j8j7i9k1w85b6506ixd58irxc6d-lima-0.20.2"
         },
         "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/rvphha7vk17k41zsn1nfwnqwfyva2v9z-lima-0.20.2",
-              "default": true
-            }
-          ],
           "store_path": "/nix/store/rvphha7vk17k41zsn1nfwnqwfyva2v9z-lima-0.20.2"
         },
         "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/gzqmb9g15m1xaz9s2b1hyg7z7mana3k2-lima-0.20.2",
-              "default": true
-            }
-          ],
           "store_path": "/nix/store/gzqmb9g15m1xaz9s2b1hyg7z7mana3k2-lima-0.20.2"
         }
       }

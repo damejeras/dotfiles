@@ -95,9 +95,9 @@ return {
       },
       sections = {
         lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_b = {'branch', 'diagnostics'},
         lualine_c = {{ navicline }},
-        lualine_x = {{'filename', path = 1}, 'encoding', 'fileformat', 'filetype'},
+        lualine_x = {'diff', {'filename', path = 1}, 'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
       },
@@ -130,12 +130,12 @@ return {
       -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
       -- animation = true,
       -- insert_at_start = true,
-      -- …etc.
+      -- etc.
       icons = {
         gitsigns = {
-          added = {enabled = true, icon = '+'},
-          changed = {enabled = true, icon = '…'},
-          deleted = {enabled = true, icon = '-'},
+          added = {enabled = true},
+          changed = {enabled = true},
+          deleted = {enabled = true},
         },
         pinned = {
           button = '📌',
