@@ -3,6 +3,7 @@
 	email = darius@mejeras.lt
 [core]
 	excludesfile = ~/.gitignore
+	pager = less -+$LESS -RS
 [push]
 	autoSetupRemote = true
 [oh-my-zsh]
