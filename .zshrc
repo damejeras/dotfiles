@@ -34,6 +34,9 @@ PATH=$HOME/.local/bin:$PATH
 # Launch devbox shell
 eval "$(devbox global shellenv --init-hook -r)"
 
+# This is set by devbox and breaks KDE
+unset XDG_DATA_DIRS
+
 # Remove odd devbox wrappers from PATH
 # https://github.com/jetpack-io/devbox/issues/1509
 TRIM_PATHS="$(jq -r '.Variables.PATH.Value' < "$HOME/.local/share/devbox/global/default/.devbox/.nix-print-dev-env-cache")"
