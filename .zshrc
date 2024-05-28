@@ -194,7 +194,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias wch="watch"
+alias w2="watch -n 2 "
+alias w1="watch -n 1 "
 alias dc="docker-compose"
 alias k="kubectl"
 alias t="tmux-session" # quick tmux session creation
